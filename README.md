@@ -31,7 +31,7 @@ exit(int code) void -> завершает приложение с кодом cod
 ### Математические
 abs(number n) number -> возвращает модуль числа n  
 sqrt(number n) number -> возвращает корень числа n  
-hypot(number a,number b) number -> возвращает гипотенузу c^2=a^2+b^2    
+hypot(number a, number b) number -> возвращает гипотенузу c^2=a^2+b^2    
 max(array[number] arr) number -> возвращает максимальный элемент массива arr   
 min(array[number] arr) number -> возвращает минимальный элемент массива arr  
 sum(array[number] arr) number -> возвращает сумму элементов массива arr  
@@ -62,14 +62,19 @@ false -> 0
 pi -> Число Пи  
 e -> Число Эйлера, основание натурального логарифма  
 tau -> Число тау, 2*pi  
-g -> Усорение свободного падения   
+g -> Ускорение свободного падения   
 G -> Гравитационная постоянная  
 c -> Скорость света  
 h -> постоянная Планка  
 k -> постоянная Больцмана  
 F -> постоянная Фарадея  
 Na -> число Авогадро
-## Работа с датой и временем  
+## Работа с множествами
+isSubset(set a, set b) bool -> возвращает true, если все элементы a принадлежат b  
+difference(set a, set b) set -> возвращает множество уникальных элементов a  
+union(set a, set b) set -> объединение множеств a и b, a|b  
+intersection(set a, set b) set -> пересечение a и b, a&b  
+## Работа с датой и временем 
 Тип date используется для хранения количества миллисекунд, прошедших с 1 января 1970 года 0:0:0  
 В языке решена [Проблема 2038 года](https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D0%B0_2038_%D0%B3%D0%BE%D0%B4%D0%B0).  
 Для операций над датой и временем доступны следующие функции:  
@@ -79,8 +84,8 @@ getMonth(date d) int -> возвращает месяц
 getDate(date d) int -> возвращает число мемяца  
 getDay(date d) int -> возвращает день недели  
 isLeapYear(int year) bool -> возвращает true, если год высокосный, false в других случаях  
-monthLength(int year,int month) int -> возвращает длину месяца month в годе year  
-diffTime(date end,date start) date -> возвращает разницу в миллисекундах между end и start
+monthLength(int year, int month) int -> возвращает длину месяца month в годе year  
+diffTime(date end, date start) date -> возвращает разницу в миллисекундах между end и start
 <!--`date d=0; 
 getYear(d); `
 -->
