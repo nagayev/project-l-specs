@@ -11,7 +11,10 @@ number как тип означает, что функция может прин
 abs(int n) int -> Возвращает модуль числа n
 ## Стандартные типы данных
 ### Числовые
-int int8 int16 int32 int64 float double
+int int8 int16 int32 int64  
+uint uint8 uint16 uint64  
+float double  
+complex  
 ### Прочие
 void -> пустой тип  
 string -> строка юникодных символов   
@@ -70,11 +73,14 @@ Na -> число Авогадро
 Тип date используется для хранения количества миллисекунд, прошедших с 1 января 1970 года 0:0:0  
 В языке решена [Проблема 2038 года](https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D0%B0_2038_%D0%B3%D0%BE%D0%B4%D0%B0).  
 Для операций над датой и временем доступны следующие функции:  
-now() date -> возвращает сейчас  
+now() date -> возвращает количество миллисекунд с 1 января 1970 года.  
 getYear(date d) int -> возвращает год    
 getMonth(date d) int -> возвращает месяц  
 getDate(date d) int -> возвращает число мемяца  
-getDay(date d) int -> Возвращает день недели  
+getDay(date d) int -> возвращает день недели  
+isLeapYear(int year) bool -> возвращает true, если год высокосный, false в других случаях  
+monthLength(int year,int month) int -> возвращает длину месяца month в годе year  
+diffTime(date end,date start) date -> возвращает разницу в миллисекундах между end и start
 <!--`date d=0; 
 getYear(d); `
 -->
