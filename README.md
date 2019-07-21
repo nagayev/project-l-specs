@@ -47,6 +47,11 @@ set -> множество
 print(string s) void -> печатает на экран строку s  
 input() string -> возвращает ввод пользователя  
 exit(int code) void -> завершает приложение с кодом code  
+range(int start, int stop, int step) range -> возвращает арифметическую последовательность
+map(array[type] arr, callback) array[type] -> применяет функцию callback ко всем элементам arr
+filter(arra[type] arr, callback) array[type] -> фильтрует значения arr, аналог std::copy_if
+all(array[type] arr) bool -> true, если все элементы true
+any(array[type] arr) bool -> true, если хотя бы один элемент true
 ### Математические
 abs(number n) number -> возвращает модуль числа n  
 sqrt(number n) number -> возвращает корень числа n 
